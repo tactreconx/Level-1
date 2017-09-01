@@ -12,7 +12,7 @@ public class Celestial_object {
     this.Color=Color;
     this.radius=radius;
     this.x=x;
-    this.x=x;
+    this.y=y;
   }
   
     public void setskycolor(float percentcovered){
@@ -23,6 +23,22 @@ public class Celestial_object {
     background(r,g,b);
     
   }
+  float getpercentcovered(Celestial_object other){
+    float dx= this.x-other.x;
+    float dy=this.y-other.y;
+    float distance= sqrt(dx*dx+dy*dy);
+    if(distance>other.radius+this.radius){
+      return 0;
+    }
+     if(distance==0){
+       return 1;
+     }
+     return 1.0-distance/(other.radius+this.radius);
+  }
+       
+    
+    
+  
   
   public void move() {
     x+=xspeed;
