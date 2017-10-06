@@ -17,6 +17,6 @@ public class Wall {
       fill(Color);
     rect(x,y,Length,Width);
   }
-  
+ 
 }
 

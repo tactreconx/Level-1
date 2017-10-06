@@ -5,6 +5,7 @@ public class Ball {
   int yspeed;
   color Color;
   int Radius;
+  
 
   public Ball(int x, int y,int xspeed,int yspeed, int Radius, color Color) {
     this.x=x;
@@ -21,6 +22,12 @@ public class Ball {
   public void draw() {
     fill(Color);
     ellipse(x, y,Radius, Radius);
+  }
+  public void bouncevertically(){
+    this.yspeed*=-1;
+  }
+  public void bouncehorizontally(){
+    this.xspeed*=-1;
   }
 }
 
