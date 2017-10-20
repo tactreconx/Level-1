@@ -30,5 +30,3 @@ public class Ball {
     this.xspeed*=-1;
   }
 }
-
-
