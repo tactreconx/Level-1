@@ -1,16 +1,16 @@
 public class Bucket{
   int x;
   int y;
-  int Length;
+  int Height ;
   int Width;
   color Color;
   char right;
   char left;
-  public Bucket(int x,int y, int Length, int Width, color Color, char right, char left){
+  public Bucket(int x,int y, int Width, int Height, color Color, char right, char left){
     this.x=x;
     this.y=y;
     this.Color=Color;
-    this.Length=Length;
+    this.Height=Height;
     this.Width=Width;
     this.right=right;
     this.left=left;
@@ -24,7 +24,12 @@ public class Bucket{
     }
   }
   public void draw(){
-    stroke(Color);
-    rect(x,y,Length,Width);
+    fill(this.Color);
+    rect(x,y,Width,Height);
+  }
+  public void setColor(color Color){
+    this.Color=Color;
+    
+    
   }
 }

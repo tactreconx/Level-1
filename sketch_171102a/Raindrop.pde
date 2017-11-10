@@ -18,9 +18,13 @@ public class Raindrop {
   public void move() {
 
     y+=yspeed;
+    if(y>900){
+      y=0;
+      x=ceil(random(900));
+  }
   }
   public void draw() {
-    fill(Color);
+    fill(this.Color);
     ellipse(x, y, Radius, Radius);
   }
 }
