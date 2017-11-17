@@ -5,7 +5,7 @@ public class Raindrop {
   int yspeed;
   color Color;
   int Radius;
-
+boolean dropCaught=false;
 
   public Raindrop(int x, int y, int yspeed, int Radius, color Color) {
     this.x=x;
@@ -21,6 +21,7 @@ public class Raindrop {
     if(y>900){
       y=0;
       x=ceil(random(900));
+      dropCaught=false;
   }
   }
   public void draw() {
@@ -28,5 +29,3 @@ public class Raindrop {
     ellipse(x, y, Radius, Radius);
   }
 }
-
-
